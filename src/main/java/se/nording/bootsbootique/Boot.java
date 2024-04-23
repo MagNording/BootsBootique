@@ -1,21 +1,21 @@
-package com.codecademy.bootsbootique;
+package se.nording.bootsbootique;
 
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="BOOTS")
+@Table(name="boots")
 public class Boot {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Column(name="TYPE")
+
     @Enumerated(EnumType.STRING)
     private BootType type;
-    @Column(name="SIZE")
+
     private Float size;
-    @Column(name="QUANTITY")
+
     private Integer quantity;
-    @Column(name="MATERIAL")
+
     private String material;
 
     public Boot() {}

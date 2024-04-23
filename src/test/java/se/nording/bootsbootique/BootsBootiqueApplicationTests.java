@@ -1,4 +1,4 @@
-package com.codecademy.bootsbootique;
+package se.nording.bootsbootique;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

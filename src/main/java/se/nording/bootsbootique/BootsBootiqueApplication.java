@@ -1,4 +1,4 @@
-package com.codecademy.bootsbootique;
+package se.nording.bootsbootique;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

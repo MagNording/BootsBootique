@@ -1,4 +1,4 @@
-package com.codecademy.bootsbootique;
+package se.nording.bootsbootique;
 
 public enum BootType {
     CHELSEA,
