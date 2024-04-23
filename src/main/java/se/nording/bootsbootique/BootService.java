@@ -23,9 +23,18 @@ public class BootService {
     public List<BootType> getBootTypes() {
         return Arrays.asList(BootType.values());
     }
+    public List<Boot> findBootBySize(Float size) {
+        return bootRepository.findBootBySize(size);
+    }
+
+    public List<Boot> findBootBySizeAndType(Float size, BootType type) {
+        return bootRepository.findBootBySizeAndType(size, type);
+    }
 
     public Boot addBoot(Boot boot) {
-        // Add any business logic or validation here
+        if (boot == null) {
+            throw new IllegalArgumentException("Boot must not be null");
+        }
         return bootRepository.save(boot);
     }
 
@@ -50,5 +59,7 @@ public class BootService {
             return bootRepository.save(boot);
         });
     }
+
+
 }
 

@@ -27,6 +27,17 @@ public class BootController {
         return bootService.getBootTypes();
     }
 
+    @GetMapping("/{size}/{type}")
+    public List<Boot> findBootBySizeAndType(@PathVariable("size") Float size,
+                                            @PathVariable("type") BootType type) {
+        return bootService.findBootBySizeAndType(size, type);
+    }
+
+    @GetMapping("/{size}")
+    public List<Boot> findBootBySize(@PathVariable("size") Float size) {
+        return bootService.findBootBySize(size);
+    }
+
     @PostMapping("/")
     public Boot addBoot(@RequestBody Boot boot) {
         return bootService.addBoot(boot);
